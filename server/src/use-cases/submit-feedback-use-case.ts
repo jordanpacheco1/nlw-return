@@ -38,7 +38,7 @@ export class SubmitFeedbackUseCase {
           type === "BUG" ? "Problema" : type === "IDEA" ? "Ideia" : "Outro"
         }`}</strong></p>`,
         `<p>Comentário: ${comment}</p>`,
-        screenshot === "data:image/png;base64,null"
+        screenshot === "data:image/png;base64,null" || screenshot === null
           ? ""
           : `<img src="${screenshot}" />`,
         `</div>`,
